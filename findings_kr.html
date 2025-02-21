@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>분석요점 및 인사이트 - Course KMA00101</title>
+<style>
+        /* Base styles from main layout */
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #34495e;
+            --accent-color: #3498db;
+            --background-color: #f8f9fa;
+            --text-color: #333;
+            --success-color: #27ae60;
+            --warning-color: #f1c40f;
+            --danger-color: #e74c3c;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+
+        .header, .nav, .footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem 0;
+        }
+
+        .nav {
+            background-color: var(--secondary-color);
+            padding: 0.5rem 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .nav-list {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .nav-list a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+        }
+
+        /* Findings specific styles */
+        .findings-section {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .key-metric {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background: var(--accent-color);
+            color: white;
+            border-radius: 16px;
+            font-weight: 500;
+            margin: 0 0.5rem;
+        }
+
+        .insight-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .insight-card {
+            background: var(--background-color);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-top: 4px solid var(--accent-color);
+        }
+
+        .recommendation-box {
+            background: #e8f4f8;
+            border-left: 4px solid var(--accent-color);
+            padding: 1.5rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+        }
+
+        .trend-indicator {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.875rem;
+            margin-left: 0.5rem;
+        }
+
+        .positive {
+            background-color: rgba(39, 174, 96, 0.1);
+            color: var(--success-color);
+        }
+
+        .neutral {
+            background-color: rgba(241, 196, 15, 0.1);
+            color: var(--warning-color);
+        }
+
+        .negative {
+            background-color: rgba(231, 76, 60, 0.1);
+            color: var(--danger-color);
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        .summary-points {
+            list-style: none;
+            margin: 1rem 0;
+        }
+
+        .summary-points li {
+            margin: 0.75rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .summary-points li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+        }
+
+        .correlation-box {
+            display: flex;
+            align-items: center;
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .correlation-value {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--accent-color);
+            margin-right: 1rem;
+        }
+    </style>
+</head>
+<body>
+<header class="header">
+<div class="container">
+<h1>분석요점 및 인사이트</h1>
+</div>
+</header>
+<nav class="nav">
+<div class="container">
+<ul class="nav-list">
+<li><a href="index.html">Home</a></li>
+<li><a href="demographics.html">Demographics</a></li>
+<li><a href="performance.html">Performance</a></li>
+<li><a href="evaluation.html">Evaluation</a></li>
+<li><a href="findings.html">Findings</a></li>
+</ul>
+</div>
+</nav>
+<main class="container">
+<div class="findings-section">
+<h2>종합 강의 효과성</h2>
+<div class="insight-grid">
+<div class="insight-card">
+<h3>학업 성취도</h3>
+<div class="correlation-box">
+<span class="correlation-value">3.47</span>
+<span>평균 학점</span>
+<span class="trend-indicator positive">↑ 목표 초과</span>
+</div>
+<ul class="summary-points">
+<li>73.4%의 학생이 3.5 이상 학점 달성</li>
+<li>학점과 강의 성적 간 강한 상관관계 (r = 0.72)</li>
+<li>학년별 일관된 향상</li>
+</ul>
+</div>
+<div class="insight-card">
+<h3>학생 만족도</h3>
+<div class="correlation-box">
+<span class="correlation-value">8.33</span>
+<span>평균 만족도 점수</span>
+<span class="trend-indicator positive">↑ 높음</span>
+</div>
+<ul class="summary-points">
+<li>46%가 높은 만족도 (9-10점) 보고</li>
+<li>모든 지표에서 100% 응답률</li>
+<li>강의 운영에 대한 강한 긍정적 피드백</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="findings-section">
+<h2>인구통계 인사이트</h2>
+<div class="insight-grid">
+<div class="insight-card">
+<h3>단과대학 분포</h3>
+<ul class="summary-points">
+<li>공과대학이 63.3%로 우세</li>
+<li>총 5개 단과대학 참여</li>
+<li>단과대학별 다양한 성과 패턴</li>
+</ul>
+</div>
+<div class="insight-card">
+<h3>학생 구성</h3>
+<ul class="summary-points">
+<li>완벽한 성비 균형 (남15/여15)</li>
+<li>93.3%가 1~2학년 학생</li>
+<li>다양한 학과 분포</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="findings-section">
+<h2>성과 패턴</h2>
+<div class="recommendation-box">
+<h3>주요 상관관계</h3>
+<ul class="summary-points">
+<li>강한 학점-평가 상관관계 (r = 1.002)</li>
+<li>높은 강의 성적 상관관계 (r = 1.011)</li>
+<li>유의미한 단과대학 효과 (r = 0.913)</li>
+</ul>
+</div>
+<div class="recommendation-box">
+<h3>주목할 만한 경향</h3>
+<ul class="summary-points">
+<li>ICT융합대학이 평균 학점 4.03으로 선두</li>
+<li>학년이 올라갈수록 명확한 성과 향상</li>
+<li>성별 그룹 간 일관된 효과성</li>
+</ul>
+</div>
+</div>
+<div class="findings-section">
+<h2>전략적 시사점</h2>
+<div class="insight-grid">
+<div class="insight-card">
+<h3>강점</h3>
+<ul class="summary-points">
+<li>높은 종합 학업 성취도</li>
+<li>강한 학생 만족도</li>
+<li>효과적인 지식 발전</li>
+</ul>
+</div>
+<div class="insight-card">
+<h3>개선 영역</h3>
+<ul class="summary-points">
+<li>단과대학별 성과 차이</li>
+<li>고학년 학생 대표성</li>
+<li>특정 학생 집단 지원</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="findings-section">
+<h2>향후 제안 사항</h2>
+<div class="recommendation-box">
+<ul class="summary-points">
+<li>식별된 성과 격차에 대한 맞춤형 지원 시행</li>
+<li>단과대학 간 협력 및 자원 공유 강화</li>
+<li>고학년 등록률 증가 전략 개발</li>
+<li>지속적인 최적화를 위해 인구통계 경향 모니터링 계속</li>
+</ul>
+</div>
+</div>
+</main>
+<footer class="footer">
+<div class="container">
+<p>2024학년도 • KMA00101 강의 분석 보고서</p>
+</div>
+</footer>
+</body>
+</html>
