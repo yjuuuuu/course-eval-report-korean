@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>KMA00101 강의 분석</title>
+<style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #34495e;
+            --accent-color: #3498db;
+            --background-color: #f8f9fa;
+            --text-color: #333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+
+        .header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .nav {
+            background-color: var(--secondary-color);
+            padding: 0.5rem 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .nav-list {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .nav-list a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-list a:hover {
+            background-color: rgba(255,255,255,0.1);
+        }
+
+        .main-content {
+            padding: 2rem 0;
+        }
+
+        .hero {
+            background-color: white;
+            padding: 3rem 0;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .stat-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .metric {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--accent-color);
+        }
+
+        .footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+<body>
+<header class="header">
+<div class="container">
+<h1>KMA00101 강의 분석</h1>
+</div>
+</header>
+<nav class="nav">
+<div class="container">
+<ul class="nav-list">
+<li><a href="index.html">홈</a></li>
+<li><a href="demographics.html">인구통계</a></li>
+<li><a href="performance.html">성적</a></li>
+<li><a href="evaluation.html">평가</a></li>
+<li><a href="findings.html">분석요점</a></li>
+</ul>
+</div>
+</nav>
+<main class="main-content">
+<section class="hero">
+<div class="container">
+<h2>강의 개요 - 2024학년도</h2>
+<p>KMA00101 강의 (9분반)의 학생 성과, 인구통계, 평가 데이터를 종합적으로 분석.</p>
+</div>
+</section>
+<div class="container">
+<div class="stats-grid">
+<div class="stat-card">
+<h3>학생 등록 수</h3>
+<div class="metric">30</div>
+<p>총 등록 학생 수</p>
+</div>
+<div class="stat-card">
+<h3>평균 학점</h3>
+<div class="metric">3.47</div>
+<p>평균 학업 성과</p>
+</div>
+<div class="stat-card">
+<h3>만족도 점수</h3>
+<div class="metric">8.33/10</div>
+<p>평균 학생 만족도</p>
+</div>
+<div class="stat-card">
+<h3>단과대학 수</h3>
+<div class="metric">5</div>
+<p>대표 단과대학 수</p>
+</div>
+</div>
+<section class="key-findings">
+<h2>주요 특징</h2>
+<ul>
+<li>높은 만족도를 가진 강한 종합 강의 효과성</li>
+<li>균형 잡힌 성별 분포</li>
+<li>단과대학 간 유의미한 성과 차이</li>
+<li>학년별 명확한 학업 성과 향상 패턴</li>
+</ul>
+</section>
+</div>
+</main>
+<footer class="footer">
+<div class="container">
+<p>Academic Year 2024 • KMA00101 강의 분석 Report</p>
+</div>
+</footer>
+</body>
+</html>
