@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>학업 성과 분석 - Course KMA00101</title>
+<style>
+        /* Base styles from main layout */
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #34495e;
+            --accent-color: #3498db;
+            --background-color: #f8f9fa;
+            --text-color: #333;
+            --success-color: #27ae60;
+            --warning-color: #f1c40f;
+            --danger-color: #e74c3c;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+
+        .header, .nav, .footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem 0;
+        }
+
+        .nav {
+            background-color: var(--secondary-color);
+            padding: 0.5rem 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .nav-list {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .nav-list a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+        }
+
+        /* 성적 specific styles */
+        .performance-section {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .metric-card {
+            background: var(--background-color);
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .metric-value {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--accent-color);
+            margin: 0.5rem 0;
+        }
+
+        .metric-label {
+            color: var(--secondary-color);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            background: white;
+        }
+
+        th, td {
+            padding: 0.75rem;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        .performance-indicator {
+            display: inline-block;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.875rem;
+            font-weight: bold;
+        }
+
+        .high {
+            background-color: rgba(39, 174, 96, 0.2);
+            color: var(--success-color);
+        }
+
+        .medium {
+            background-color: rgba(241, 196, 15, 0.2);
+            color: var(--warning-color);
+        }
+
+        .low {
+            background-color: rgba(231, 76, 60, 0.2);
+            color: var(--danger-color);
+        }
+
+        .trend-chart {
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .analysis-box {
+            background: #e8f4f8;
+            border-left: 4px solid var(--accent-color);
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin: 2rem 0 1rem;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .insight-list {
+            list-style: none;
+            margin: 1rem 0;
+        }
+
+        .insight-list li {
+            margin: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .insight-list li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+        }
+    </style>
+</head>
+<body>
+<header class="header">
+<div class="container">
+<h1>학업 성과 분석</h1>
+</div>
+</header>
+<nav class="nav">
+<div class="container">
+<ul class="nav-list">
+<li><a href="index.html">홈</a></li>
+<li><a href="demographics.html">인구통계</a></li>
+<li><a href="performance.html">성적</a></li>
+<li><a href="evaluation.html">평가</a></li>
+<li><a href="findings.html">분석요점</a></li>
+</ul>
+</div>
+</nav>
+<main class="container">
+<div class="performance-section">
+<h2>종합 성과 지표</h2>
+<div class="metrics-grid">
+<div class="metric-card">
+<div class="metric-label">평균 학점</div>
+<div class="metric-value">3.47</div>
+<div class="performance-indicator high">평균 이상</div>
+</div>
+<div class="metric-card">
+<div class="metric-label">평균 강의 성적</div>
+<div class="metric-value">3.63</div>
+<div class="performance-indicator high">우수</div>
+</div>
+<div class="metric-card">
+<div class="metric-label">성과 격차</div>
+<div class="metric-value">+0.16</div>
+<div class="performance-indicator medium">보통</div>
+</div>
+</div>
+<div class="analysis-box">
+<h3>주요 성과 지표</h3>
+<ul class="insight-list">
+<li>학생의 73.4%가 3.5 이상 학점 달성</li>
+<li>우수 correlation between GPA and course grades</li>
+<li>인구통계 집단 간 일관된 성과</li>
+</ul>
+</div>
+</div>
+<div class="performance-section">
+<h2>단과대학별 성과</h2>
+<table>
+<thead>
+<tr>
+<th>단과대학</th>
+<th>학생 수</th>
+<th>평균 학점</th>
+<th>평균 강의 성적</th>
+<th>성과 경향</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ICT융합대학</td>
+<td>2</td>
+<td>4.03</td>
+<td>3.75</td>
+<td><span class="performance-indicator high">일관되게 높음</span></td>
+</tr>
+<tr>
+<td>자연과학대학</td>
+<td>2</td>
+<td>3.72</td>
+<td>4.00</td>
+<td><span class="performance-indicator high">우수 with Variation</span></td>
+</tr>
+<tr>
+<td>건축대학</td>
+<td>5</td>
+<td>3.65</td>
+<td>3.70</td>
+<td><span class="performance-indicator high">평균 이상</span></td>
+</tr>
+<tr>
+<td>공과대학</td>
+<td>19</td>
+<td>3.40</td>
+<td>3.68</td>
+<td><span class="performance-indicator medium">보통 to High</span></td>
+</tr>
+<tr>
+<td>예술체육대학</td>
+<td>2</td>
+<td>2.84</td>
+<td>2.50</td>
+<td><span class="performance-indicator low">평균 이하</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="performance-section">
+<h2>학년별 성과 분석</h2>
+<table>
+<thead>
+<tr>
+<th>학년-성별</th>
+<th>수</th>
+<th>평균 학점</th>
+<th>평균 강의 성적</th>
+<th>성과 격차</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1st Year Male</td>
+<td>7</td>
+<td>3.72</td>
+<td>3.64</td>
+<td>-0.08</td>
+</tr>
+<tr>
+<td>1st Year Female</td>
+<td>8</td>
+<td>3.38</td>
+<td>3.31</td>
+<td>-0.07</td>
+</tr>
+<tr>
+<td>2nd Year Male</td>
+<td>6</td>
+<td>3.07</td>
+<td>3.75</td>
+<td>+0.68</td>
+</tr>
+<tr>
+<td>2nd Year Female</td>
+<td>7</td>
+<td>3.69</td>
+<td>3.79</td>
+<td>+0.10</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="performance-section">
+<h2>Key Insights</h2>
+<div class="analysis-box">
+<h3>성과 패턴</h3>
+<ul class="insight-list">
+<li>우수 academic achievement with 73.4% above 3.5 GPA</li>
+<li>학점과 강의 성적 간 긍정적 상관관계</li>
+<li>단과대학 간 주목할 만한 성과 차이</li>
+<li>학년별 성별에 따른 성과 차이 존재</li>
+</ul>
+</div>
+</div>
+</main>
+<footer class="footer">
+<div class="container">
+<p>2024학년도 • KMA00101 강의 분석 보고서</p>
+</div>
+</footer>
+</body>
+</html>
